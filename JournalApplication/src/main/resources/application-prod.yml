@@ -1,0 +1,7 @@
+spring:
+    data:
+      mongodb:
+        uri: mongodb://adityapadole2001_db_user:ksSFnstvV3ZhhGta@ac-i9hndwa-shard-00-00.xrqbvyh.mongodb.net:27017,ac-i9hndwa-shard-00-01.xrqbvyh.mongodb.net:27017,ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017/journaldb?tls=true&replicaSet=atlas-eb6x8n-shard-0&authSource=admin&retryWrites=true&w=majority&tlsInsecure=true
+        database: journaldb
+        auto-index-creation: true
+
