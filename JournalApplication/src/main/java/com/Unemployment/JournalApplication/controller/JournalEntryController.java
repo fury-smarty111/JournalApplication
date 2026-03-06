@@ -32,7 +32,7 @@ public class JournalEntryController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String userName = authentication.getName();
         Users user = userEntryService.findByUserName(userName);
-        List<JournalEntry> all = user.getEntries();
+        List<JournalEntry> all = user.getJournalEntries();
         if(all!=null && !all.isEmpty()){
             return new ResponseEntity<>(all,HttpStatus.OK);
         }
@@ -44,7 +44,6 @@ public class JournalEntryController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String userName = authentication.getName();
        try {
-           myEntry.setDate(LocalDateTime.now());
            journalEntryService.saveEntry(myEntry,userName);
            return new ResponseEntity<>(myEntry, HttpStatus.CREATED);
        }
@@ -58,7 +57,11 @@ public class JournalEntryController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String userName = authentication.getName();
         Users user = userEntryService.findByUserName(userName);
-        List <JournalEntry> collect = user.getEntries().stream().filter(x -> x.getId().equals(myId)).collect(Collectors.toList());
+        //user.getJournalEntries().forEach(entry -> {
+        //    System.out.println("Comparing: " + entry.getId() + " with " + myId);});
+        List<JournalEntry> collect = user.getJournalEntries().stream()
+                .filter(x -> x.getId().toString().equals(myId.toString()))
+                .toList();
         if(!collect.isEmpty()) {
             Optional<JournalEntry> journalEntry = journalEntryService.findById(myId);
             if (journalEntry.isPresent()) {
@@ -89,7 +92,7 @@ public class JournalEntryController {
         Users user = userEntryService.findByUserName(userName);
 
         // Find the entry within the user's list directly
-        Optional<JournalEntry> journalEntryMatch = user.getEntries().stream()
+        Optional<JournalEntry> journalEntryMatch = user.getJournalEntries().stream()
                 .filter(x -> x.getId().equals(myId)) // Ensure both are ObjectId type
                 .findFirst();
 
