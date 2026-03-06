@@ -1,18 +1,39 @@
 spring:
-    data:
-      mongodb:
-        uri: mongodb://adityapadole2001_db_user:ksSFnstvV3ZhhGta@ac-i9hndwa-shard-00-00.xrqbvyh.mongodb.net:27017,ac-i9hndwa-shard-00-01.xrqbvyh.mongodb.net:27017,ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017/journaldb?tls=true&replicaSet=atlas-eb6x8n-shard-0&authSource=admin&retryWrites=true&w=majority&tlsInsecure=true
-        database: journaldb
-        auto-index-creation: true
+  data:
+    mongodb:
+      uri: mongodb://adityapadole2001_db_user:ksSFnstvV3ZhhGta@ac-i9hndwa-shard-00-00.xrqbvyh.mongodb.net:27017,ac-i9hndwa-shard-00-01.xrqbvyh.mongodb.net:27017,ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017/journaldb?tls=true&replicaSet=atlas-eb6x8n-shard-0&authSource=admin&retryWrites=true&w=majority&tlsInsecure=true
+      database: journaldb
+      auto-index-creation: true
+    redis:
+      host: localhost
+      port: 6379
+      timeout: 5000 # Lowered for better dev experience
 
-server:
-  port: 8080
+  # Added Mail Settings for your EmailService
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${GMAIL_USERNAME} # Use env variables for safety!
+    password: ${GMAIL_PASSWORD:default_pass}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
 
-  servlet:
-    context-path: /journal
+# Custom properties for WeatherService
+weather:
+  api:
+    key: ${WEATHER_API_KEY}
 
 logging:
-    level:
-        com:
-          Unemployment:
-            JournalApplication: DEBUG
+  level:
+    com.Unemployment.JournalApplication: DEBUG
+    org.springframework.data.mongodb: INFO # Keeps logs clean
+    org:
+      springframework:
+        security: DEBUG
+      data:
+        mongodb:
+          core: DEBUG

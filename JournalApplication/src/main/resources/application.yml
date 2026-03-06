@@ -7,3 +7,4 @@ server:
   servlet:
     context-path: /journal
 
+WEATHER_API_KEY: dummy_value_123
