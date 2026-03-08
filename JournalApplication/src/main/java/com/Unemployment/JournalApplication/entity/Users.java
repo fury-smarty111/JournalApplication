@@ -1,7 +1,6 @@
 package com.Unemployment.JournalApplication.entity;
 
-import lombok.Data;
-import lombok.NonNull;
+import lombok.*;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
@@ -13,17 +12,29 @@ import java.util.List;
 
 @Document(collection = "users")
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Users {
 
     @Id
     private ObjectId id;
+
     @Indexed(unique = true)
     @NonNull
     private String userName;
+
+    private String email;
+
+    private boolean sentimentAnalysis;
+
     @NonNull
     private String password;
-    @DBRef
-    private List<JournalEntry> entries = new ArrayList<>();
-    private List<String> roles;
 
+    @DBRef
+    @Builder.Default // Ensures builder doesn't set this to null
+    private List<JournalEntry> journalEntries = new ArrayList<>();
+
+    @Builder.Default // Ensures builder doesn't set this to null
+    private List<String> roles = new ArrayList<>();
 }

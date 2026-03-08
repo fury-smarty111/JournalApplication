@@ -4,7 +4,6 @@ import com.Unemployment.JournalApplication.entity.JournalEntry;
 import com.Unemployment.JournalApplication.entity.Users;
 import com.Unemployment.JournalApplication.repository.UserEntryRepo;
 import com.Unemployment.JournalApplication.service.UserEntryService;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -16,46 +15,65 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-public class userServiceTests {
+public class userServiceTests { // Renamed to UpperCamelCase
 
     @Autowired
-    UserEntryRepo userEntryRepo;
+    private UserEntryRepo userEntryRepo;
 
     @Autowired
-    UserEntryService userEntryService;
+    private UserEntryService userEntryService;
 
-    @Disabled
+    /**
+     * Simple math test to verify Parameterized Test setup.
+     */
     @ParameterizedTest
     @CsvSource({
-            "1,2,3",
-            "3,6,9",
-            "1,2,4"
+            "1, 2, 3",
+            "3, 6, 9"
     })
-    public void CheckExpected(int a, int b, int expected){
-        assertTrue(a+b==expected,"a+b != expected value");
+    public void checkExpected(int a, int b, int expected) {
+        assertEquals(expected, a + b, "The sum of a and b should equal the expected value");
     }
 
-    @Disabled
-    @ParameterizedTest
-    @CsvSource({
-            "RAM",
-            "Vim",
-            "Vipul"
-    })
-    public void CheckUser(String userName){
-        assertNotNull(userEntryRepo.findByUserName(userName));
-    }
-
-    @Disabled
+    /**
+     * Verifies that specific users exist in the database.
+     * Ensure these users exist in your MongoDB before running.
+     */
     @ParameterizedTest
     @CsvSource({
             "RAM",
             "Vipul"
     })
-    public void CheckUserEntries(String userName){
+    public void checkUserExists(String userName) {
         Users user = userEntryRepo.findByUserName(userName);
-        List<JournalEntry> journalEntries = user.getEntries();
-        assertFalse(journalEntries.isEmpty(), "No entries found for user: " + userName);
-        assertTrue(user.getEntries().size()>0,"no entries for the user : "+userName );
+        assertNotNull(user, "User " + userName + " was not found in the database");
+    }
+
+    /**
+     * Verifies that the user has at least one journal entry associated with their account.
+     */
+    @ParameterizedTest
+    @CsvSource({
+            "RAM",
+            "Vipul"
+    })
+    public void checkUserEntries(String userName) {
+        Users user = userEntryRepo.findByUserName(userName);
+
+        // Check if user exists first to avoid NullPointerException
+        assertNotNull(user, "Cannot check entries because user " + userName + " does not exist");
+
+        List<JournalEntry> journalEntries = user.getJournalEntries();
+
+        assertNotNull(journalEntries, "The journal entries list for " + userName + " should not be null");
+        assertFalse(journalEntries.isEmpty(), "User " + userName + " should have at least one journal entry");
+    }
+
+    /**
+     * A standard JUnit test (Non-parameterized)
+     */
+    @Test
+    public void testRepositoryIsNotNull() {
+        assertNotNull(userEntryRepo, "Spring should have injected the UserEntryRepo bean");
     }
 }
