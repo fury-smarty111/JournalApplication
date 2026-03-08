@@ -7,14 +7,37 @@ spring:
     redis:
       host: localhost
       port: 6379
-      timeout: 5000 # Lowered for better dev experience
+      timeout: 5000
 
-  # Added Mail Settings for your EmailService
+  kafka:
+    bootstrap-servers: pkc-619z3.us-east1.gcp.confluent.cloud:9092
+    properties:
+      security:
+        protocol: SASL_SSL
+      sasl:
+        mechanism: PLAIN
+        jaas:
+          config: "org.apache.kafka.common.security.plain.PlainLoginModule required username='MBTMMOPBCD4CLHX7' password='cfltGZtnhVdX27tW1rbpiWCZsbZqFyl52hMHnetuHBDuJNIoI6UD5gxDHev4Ar+A';"
+      session:
+        timeout:
+          ms: 45000
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      # This tells Kafka to convert your SentimentData object to JSON
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      group-id: sentiment-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
+
+  # FIXED: Moved mail inside 'spring'
   mail:
     host: smtp.gmail.com
     port: 587
-    username: ${GMAIL_USERNAME} # Use env variables for safety!
-    password: ${GMAIL_PASSWORD:default_pass}
+    username: ${GMAIL_USERNAME}
+    password: ${GMAIL_PASSWORD}
     properties:
       mail:
         smtp:
@@ -22,18 +45,17 @@ spring:
           starttls:
             enable: true
 
-# Custom properties for WeatherService
+# FIXED: Moved client.id outside or under spring.kafka
+client:
+  id: ccloud-springboot-client-842e46fa-c68d-4e6f-96c9-92ebc851c1dd
+
 weather:
   api:
     key: ${WEATHER_API_KEY}
 
 logging:
   level:
-    com.Unemployment.JournalApplication: DEBUG
-    org.springframework.data.mongodb: INFO # Keeps logs clean
-    org:
-      springframework:
-        security: DEBUG
-      data:
-        mongodb:
-          core: DEBUG
+    com.unemployment.journalapplication: DEBUG # Use lowercase if you renamed packages!
+    org.springframework.data.mongodb: INFO
+    org.springframework.security: DEBUG
+    org.springframework.data.mongodb.core: DEBUG

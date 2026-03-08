@@ -1,20 +1,260 @@
-26-03-03 22:36:11.528 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.Unemployment.JournalApplication.JournalApplicationTests]: JournalApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration. 
-26-03-03 22:36:11.756 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.Unemployment.JournalApplication.JournalApplication for test class com.Unemployment.JournalApplication.JournalApplicationTests 
-26-03-03 22:36:12.401 [main] INFO  c.U.J.JournalApplicationTests - Starting JournalApplicationTests using Java 17.0.18 with PID 28256 (started by Aditya in D:\JournalApplication\JournalApplication) 
-26-03-03 22:36:12.402 [main] DEBUG c.U.J.JournalApplicationTests - Running with Spring Boot v3.4.11, Spring v6.2.12 
-26-03-03 22:36:12.405 [main] INFO  c.U.J.JournalApplicationTests - The following 1 profile is active: "dev" 
-26-03-03 22:36:13.567 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode. 
-26-03-03 22:36:13.669 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 90 ms. Found 2 MongoDB repository interfaces. 
-26-03-03 22:36:14.363 [main] INFO  org.mongodb.driver.cluster - Adding discovered server ac-i9hndwa-shard-00-00.xrqbvyh.mongodb.net:27017 to client view of cluster 
-26-03-03 22:36:14.432 [main] INFO  org.mongodb.driver.cluster - Adding discovered server ac-i9hndwa-shard-00-01.xrqbvyh.mongodb.net:27017 to client view of cluster 
-26-03-03 22:36:14.439 [main] INFO  org.mongodb.driver.cluster - Adding discovered server ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017 to client view of cluster 
-26-03-03 22:36:14.476 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.2.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Eclipse Adoptium/17.0.18+8"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='adityapadole2001_db_user', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@1e1e837d, com.mongodb.Jep395RecordCodecProvider@4b957db0, com.mongodb.KotlinCodecProvider@5d71b500]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[ac-i9hndwa-shard-00-00.xrqbvyh.mongodb.net:27017, ac-i9hndwa-shard-00-01.xrqbvyh.mongodb.net:27017, ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017], srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-eb6x8n-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=true, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null} 
-26-03-03 22:36:15.111 [main] INFO  org.mongodb.driver.cluster - Waiting for server to become available for operation with ID 5. Remaining time: 29983 ms. Selector: WritableServerSelector, topology description: {type=REPLICA_SET, servers=[{address=ac-i9hndwa-shard-00-00.xrqbvyh.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}, {address=ac-i9hndwa-shard-00-01.xrqbvyh.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}, {address=ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}]. 
-26-03-03 22:36:15.185 [cluster-ClusterId{value='69a715069d0c965b1beb407f', description='null'}-ac-i9hndwa-shard-00-01.xrqbvyh.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-i9hndwa-shard-00-01.xrqbvyh.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=335393100, minRoundTripTimeNanos=0, setName='atlas-eb6x8n-shard-0', canonicalAddress=ac-i9hndwa-shard-00-01.xrqbvyh.mongodb.net:27017, hosts=[ac-i9hndwa-shard-00-01.xrqbvyh.mongodb.net:27017, ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017, ac-i9hndwa-shard-00-00.xrqbvyh.mongodb.net:27017], passives=[], arbiters=[], primary='ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=223, topologyVersion=TopologyVersion{processId=699f6a0e5030c81c887a3ded, counter=3}, lastWriteDate=Tue Mar 03 22:36:15 IST 2026, lastUpdateTimeNanos=1463564650511900} 
-26-03-03 22:36:15.185 [cluster-ClusterId{value='69a715069d0c965b1beb407f', description='null'}-ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=335393200, minRoundTripTimeNanos=0, setName='atlas-eb6x8n-shard-0', canonicalAddress=ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017, hosts=[ac-i9hndwa-shard-00-01.xrqbvyh.mongodb.net:27017, ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017, ac-i9hndwa-shard-00-00.xrqbvyh.mongodb.net:27017], passives=[], arbiters=[], primary='ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff00000000000000f5, setVersion=223, topologyVersion=TopologyVersion{processId=699f678ede767811aa8a0608, counter=6}, lastWriteDate=Tue Mar 03 22:36:15 IST 2026, lastUpdateTimeNanos=1463564650511800} 
-26-03-03 22:36:15.185 [cluster-ClusterId{value='69a715069d0c965b1beb407f', description='null'}-ac-i9hndwa-shard-00-00.xrqbvyh.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-i9hndwa-shard-00-00.xrqbvyh.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=335392000, minRoundTripTimeNanos=0, setName='atlas-eb6x8n-shard-0', canonicalAddress=ac-i9hndwa-shard-00-00.xrqbvyh.mongodb.net:27017, hosts=[ac-i9hndwa-shard-00-01.xrqbvyh.mongodb.net:27017, ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017, ac-i9hndwa-shard-00-00.xrqbvyh.mongodb.net:27017], passives=[], arbiters=[], primary='ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=223, topologyVersion=TopologyVersion{processId=699f64c1b2591dd95fbe1eaf, counter=4}, lastWriteDate=Tue Mar 03 22:36:15 IST 2026, lastUpdateTimeNanos=1463564650511800} 
-26-03-03 22:36:15.190 [cluster-ClusterId{value='69a715069d0c965b1beb407f', description='null'}-ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017 with max election id 7fffffff00000000000000f5 and max set version 223 
-26-03-03 22:36:15.947 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailServiceImpl 
-26-03-03 22:36:17.076 [main] INFO  c.U.J.JournalApplicationTests - Started JournalApplicationTests in 5.1 seconds (process running for 7.25) 
-26-03-03 22:36:18.529 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.Unemployment.JournalApplication.userServiceTests]: userServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration. 
-26-03-03 22:36:18.537 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.Unemployment.JournalApplication.JournalApplication for test class com.Unemployment.JournalApplication.userServiceTests 
+26-03-07 02:51:11.330 [main] INFO  Cron.UsersSchedulerTest - Starting UsersSchedulerTest using Java 17.0.18 with PID 30412 (started by Aditya in D:\JournalApplication\JournalApplication) 
+26-03-07 02:51:11.341 [main] INFO  Cron.UsersSchedulerTest - The following 1 profile is active: "dev" 
+26-03-07 02:51:13.172 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode 
+26-03-07 02:51:13.176 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode. 
+26-03-07 02:51:13.556 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 366 ms. Found 3 MongoDB repository interfaces. 
+26-03-07 02:51:13.589 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode 
+26-03-07 02:51:13.591 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode. 
+26-03-07 02:51:13.624 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.Unemployment.JournalApplication.repository.ConfigJournalAppRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository 
+26-03-07 02:51:13.625 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.Unemployment.JournalApplication.repository.JournalEntryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository 
+26-03-07 02:51:13.625 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.Unemployment.JournalApplication.repository.UserEntryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository 
+26-03-07 02:51:13.626 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces. 
+26-03-07 02:51:14.960 [main] INFO  org.mongodb.driver.cluster - Adding discovered server ac-i9hndwa-shard-00-00.xrqbvyh.mongodb.net:27017 to client view of cluster 
+26-03-07 02:51:15.040 [main] INFO  org.mongodb.driver.cluster - Adding discovered server ac-i9hndwa-shard-00-01.xrqbvyh.mongodb.net:27017 to client view of cluster 
+26-03-07 02:51:15.047 [main] INFO  org.mongodb.driver.cluster - Adding discovered server ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017 to client view of cluster 
+26-03-07 02:51:15.093 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.2.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Eclipse Adoptium/17.0.18+8"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='adityapadole2001_db_user', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@73aaec54, com.mongodb.Jep395RecordCodecProvider@239b98cb, com.mongodb.KotlinCodecProvider@117b2cc6]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[ac-i9hndwa-shard-00-00.xrqbvyh.mongodb.net:27017, ac-i9hndwa-shard-00-01.xrqbvyh.mongodb.net:27017, ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017], srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-eb6x8n-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=true, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null} 
+26-03-07 02:51:15.692 [main] DEBUG o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.Unemployment.JournalApplication.entity.JournalEntry for index information 
+26-03-07 02:51:15.706 [main] DEBUG o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.Unemployment.JournalApplication.entity.ConfigJournalAppEntity for index information 
+26-03-07 02:51:15.707 [main] DEBUG o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.Unemployment.JournalApplication.entity.Users for index information 
+26-03-07 02:51:15.829 [main] INFO  org.mongodb.driver.cluster - Waiting for server to become available for operation with ID 5. Remaining time: 29982 ms. Selector: WritableServerSelector, topology description: {type=REPLICA_SET, servers=[{address=ac-i9hndwa-shard-00-00.xrqbvyh.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}, {address=ac-i9hndwa-shard-00-01.xrqbvyh.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}, {address=ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}]. 
+26-03-07 02:51:15.941 [cluster-ClusterId{value='69ab454aca04cb42e7b29a37', description='null'}-ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=399250600, minRoundTripTimeNanos=0, setName='atlas-eb6x8n-shard-0', canonicalAddress=ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017, hosts=[ac-i9hndwa-shard-00-01.xrqbvyh.mongodb.net:27017, ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017, ac-i9hndwa-shard-00-00.xrqbvyh.mongodb.net:27017], passives=[], arbiters=[], primary='ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff00000000000000f5, setVersion=223, topologyVersion=TopologyVersion{processId=699f678ede767811aa8a0608, counter=6}, lastWriteDate=Sat Mar 07 02:51:17 IST 2026, lastUpdateTimeNanos=1738075070866900} 
+26-03-07 02:51:15.942 [cluster-ClusterId{value='69ab454aca04cb42e7b29a37', description='null'}-ac-i9hndwa-shard-00-01.xrqbvyh.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-i9hndwa-shard-00-01.xrqbvyh.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=401049600, minRoundTripTimeNanos=0, setName='atlas-eb6x8n-shard-0', canonicalAddress=ac-i9hndwa-shard-00-01.xrqbvyh.mongodb.net:27017, hosts=[ac-i9hndwa-shard-00-01.xrqbvyh.mongodb.net:27017, ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017, ac-i9hndwa-shard-00-00.xrqbvyh.mongodb.net:27017], passives=[], arbiters=[], primary='ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=223, topologyVersion=TopologyVersion{processId=699f6a0e5030c81c887a3ded, counter=3}, lastWriteDate=Sat Mar 07 02:51:17 IST 2026, lastUpdateTimeNanos=1738075071038100} 
+26-03-07 02:51:15.942 [cluster-ClusterId{value='69ab454aca04cb42e7b29a37', description='null'}-ac-i9hndwa-shard-00-00.xrqbvyh.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-i9hndwa-shard-00-00.xrqbvyh.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=399081500, minRoundTripTimeNanos=0, setName='atlas-eb6x8n-shard-0', canonicalAddress=ac-i9hndwa-shard-00-00.xrqbvyh.mongodb.net:27017, hosts=[ac-i9hndwa-shard-00-01.xrqbvyh.mongodb.net:27017, ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017, ac-i9hndwa-shard-00-00.xrqbvyh.mongodb.net:27017], passives=[], arbiters=[], primary='ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=223, topologyVersion=TopologyVersion{processId=699f64c1b2591dd95fbe1eaf, counter=4}, lastWriteDate=Sat Mar 07 02:51:17 IST 2026, lastUpdateTimeNanos=1738075070866900} 
+26-03-07 02:51:15.952 [cluster-ClusterId{value='69ab454aca04cb42e7b29a37', description='null'}-ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ac-i9hndwa-shard-00-02.xrqbvyh.mongodb.net:27017 with max election id 7fffffff00000000000000f5 and max set version 223 
+26-03-07 02:51:16.643 [main] DEBUG o.s.data.mongodb.core.MongoTemplate - find using query: {} fields: Document{{}} sort: null for class: class com.Unemployment.JournalApplication.entity.ConfigJournalAppEntity in collection: config_journal_app 
+26-03-07 02:51:18.128 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailServiceImpl 
+26-03-07 02:51:18.781 [main] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter 
+26-03-07 02:51:20.444 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [pkc-619z3.us-east1.gcp.confluent.cloud:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-sentiment-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = sentiment-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = PLAIN
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+ 
+26-03-07 02:51:20.617 [main] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector 
+26-03-07 02:51:20.889 [main] INFO  o.a.k.c.s.a.AbstractLogin - Successfully logged in. 
+26-03-07 02:51:21.024 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.8.1 
+26-03-07 02:51:21.026 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 70d6ff42debf7e17 
+26-03-07 02:51:21.026 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1772832081022 
+26-03-07 02:51:21.034 [main] INFO  o.a.k.c.c.i.LegacyKafkaConsumer - [Consumer clientId=consumer-sentiment-group-1, groupId=sentiment-group] Subscribed to topic(s): weekly-sentiments 
+26-03-07 02:51:21.065 [main] INFO  Cron.UsersSchedulerTest - Started UsersSchedulerTest in 10.385 seconds (process running for 13.559) 
+26-03-07 02:51:22.952 [main] DEBUG o.s.data.mongodb.core.MongoTemplate - find using query: { "email" : { "$regularExpression" : { "pattern" : "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,6}$", "options" : ""}}, "sentimentAnalysis" : true} fields: Document{{}} sort: null for class: class com.Unemployment.JournalApplication.entity.Users in collection: users 
+26-03-07 02:51:23.110 [main] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [pkc-619z3.us-east1.gcp.confluent.cloud:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = PLAIN
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+ 
+26-03-07 02:51:23.111 [main] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector 
+26-03-07 02:51:23.136 [main] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer. 
+26-03-07 02:51:23.165 [main] INFO  o.a.k.c.producer.ProducerConfig - These configurations '[session.timeout.ms]' were supplied but are not used yet. 
+26-03-07 02:51:23.165 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.8.1 
+26-03-07 02:51:23.166 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 70d6ff42debf7e17 
+26-03-07 02:51:23.166 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1772832083165 
+26-03-07 02:51:24.138 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-sentiment-group-1, groupId=sentiment-group] Cluster ID: lkc-y7xpwo 
+26-03-07 02:51:24.140 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sentiment-group-1, groupId=sentiment-group] Discovered group coordinator b26-pkc-619z3.us-east1.gcp.confluent.cloud:9092 (id: 2147483621 rack: null) 
+26-03-07 02:51:24.178 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sentiment-group-1, groupId=sentiment-group] (Re-)joining group 
+26-03-07 02:51:24.188 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.t.i.ClientTelemetryReporter - Client telemetry registered with client instance id: NeappYGHRcCkM3WACBwilA 
+26-03-07 02:51:25.360 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: lkc-y7xpwo 
+26-03-07 02:51:25.363 [kafka-producer-network-thread | producer-1] INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-1] ProducerId set to 12683186 with epoch 0 
+26-03-07 02:51:25.365 [kafka-producer-network-thread | producer-1] INFO  o.a.k.c.t.i.ClientTelemetryReporter - Client telemetry registered with client instance id: aChDT4twTK66Z_bYIFSVRg 
+26-03-07 02:51:25.461 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sentiment-group-1, groupId=sentiment-group] Resetting generation and member id due to: consumer pro-actively leaving the group 
+26-03-07 02:51:25.461 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sentiment-group-1, groupId=sentiment-group] Request joining group due to: consumer pro-actively leaving the group 
+26-03-07 02:51:25.461 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.LegacyKafkaConsumer - [Consumer clientId=consumer-sentiment-group-1, groupId=sentiment-group] Unsubscribed all topics or patterns and assigned partitions 
+26-03-07 02:51:25.463 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sentiment-group-1, groupId=sentiment-group] Resetting generation and member id due to: consumer pro-actively leaving the group 
+26-03-07 02:51:25.463 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sentiment-group-1, groupId=sentiment-group] Request joining group due to: consumer pro-actively leaving the group 
+26-03-07 02:51:26.678 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sentiment-group-1, groupId=sentiment-group] Request joining group due to: need to re-join with the given member-id: consumer-sentiment-group-1-b9b925ae-751b-48a8-9305-75cdd3b10765 
+26-03-07 02:51:26.685 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed 
+26-03-07 02:51:26.685 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter 
+26-03-07 02:51:26.686 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter 
+26-03-07 02:51:26.686 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed 
+26-03-07 02:51:26.698 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-sentiment-group-1 unregistered 
+26-03-07 02:51:26.699 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - sentiment-group: Consumer stopped 
+26-03-07 02:51:26.709 [SpringApplicationShutdownHook] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms. 
+26-03-07 02:51:27.796 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed 
+26-03-07 02:51:27.797 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter 
+26-03-07 02:51:27.797 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter 
+26-03-07 02:51:27.797 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed 
+26-03-07 02:51:27.798 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered 
